@@ -2,6 +2,7 @@
 #include <SFML/Network.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
+/*sosi guboy tryasi*/
 int main(int argc, char const *argv[])
 {
 	sf::TcpSocket socket;
