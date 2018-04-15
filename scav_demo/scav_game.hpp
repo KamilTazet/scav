@@ -7,8 +7,22 @@
 #include <iostream>
 #include <map>
 
+
+class Connector {
+private:
+	sf::TcpSocket socket;
+	char* ip;
+	int port;
+public:
+	Connector(char* address, int prt) {}
+	void get();
+	void send();
+	void connect();
+	void disconnect();
+}
+
 class Action {
- public:
+public:
 	virtual void execute(GameObject* g);
 };
 
@@ -16,9 +30,8 @@ class MoveAction: public Action {
 private:
 	float x;
 	float y;
-	int obj;
 public:
-	MoveAction(float dx, float dy, int id): x(dx), y(dy), obj(id) {}
+	MoveAction(float dx, float dy, int id): x(dx), y(dy){}
 	void execute();
 };
 
