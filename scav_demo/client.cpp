@@ -4,6 +4,8 @@
 #include <iostream>
 #include <thread>
 #include <list>
+#include <dos.h>
+
 std::list<Action*> actions;
 int get() {
 	sf::TcpSocket socket;
@@ -26,9 +28,8 @@ int get() {
 				}
 			default:
 				break;
-}
-
-
+		}
+		sleep (20);
 	}
 	socket.disconnect();
 }
