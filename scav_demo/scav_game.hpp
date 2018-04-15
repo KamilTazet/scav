@@ -14,10 +14,11 @@ class Action {
 
 class MoveAction: public Action {
 private:
-	float dx;
-	float dy;
+	float x;
+	float y;
+	int obj;
 public:
-	MoveAction(float x, y);
+	MoveAction(float dx, float dy, int id): x(dx), y(dy), obj(id) {}
 	void execute();
 };
 
