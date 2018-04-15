@@ -4,6 +4,7 @@
 #include <iostream>
 #include <thread>
 #include <list>
+#include <scav_game.hpp>
 #include <dos.h>
 
 GameField field();
